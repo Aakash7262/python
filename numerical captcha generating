@@ -1,0 +1,16 @@
+import random
+
+def generate_captcha():
+    captcha = ''
+    for i in range(5):
+        captcha += str(random.randint(0, 9))
+    return captcha
+
+def solve_captcha(captcha):
+    return int(captcha)
+
+if __name__ == '__main__':
+    captcha = generate_captcha()
+    print("Captcha:", captcha)
+    solution = solve_captcha(captcha)
+    print("Solution:", solution)
